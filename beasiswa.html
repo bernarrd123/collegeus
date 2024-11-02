@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collageus - Beasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ffd600;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .beasiswa-list {
+            padding: 20px;
+        }
+        .beasiswa-card {
+            background-color: #ffe08d;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+            transition: transform 0.2s;
+        }
+        .beasiswa-card:hover {
+            transform: scale(1.02);
+        }
+        .beasiswa-card img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .beasiswa-info {
+            flex: 1;
+        }
+        .beasiswa-title {
+            font-size: 20px;
+            color: #0044cc;
+            font-weight: bold;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffd600;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer a {
+            color: black;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        COLLAGEUS
+    </div>
+
+    <div class="beasiswa-list">
+        <!-- Beasiswa BCA -->
+        <a href="beasiswa-bca.html" class="beasiswa-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/BCA_logo.svg/2560px-BCA_logo.svg.png" alt="Logo BCA">
+            <div class="beasiswa-info">
+                <div class="beasiswa-title">Review Beasiswa BCA</div>
+                <div>Bersama Collageus</div>
+            </div>
+        </a>
+
+        <!-- Beasiswa MOE -->
+        <a href="beasiswa-moe.html" class="beasiswa-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/ROC_Ministry_of_Education_logo.svg/2048px-ROC_Ministry_of_Education_logo.svg.png" alt="Logo MOE">
+            <div class="beasiswa-info">
+                <div class="beasiswa-title">Review Beasiswa MOE</div>
+                <div>Bersama Collageus</div>
+            </div>
+        </a>
+
+        <!-- Beasiswa KAIST -->
+        <a href="beasiswa-kaist.html" class="beasiswa-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/KAIST_logotype.svg/1200px-KAIST_logotype.svg.png" alt="Logo KAIST">
+            <div class="beasiswa-info">
+                <div class="beasiswa-title">Review Beasiswa KAIST</div>
+                <div>Bersama Collageus</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="index.html">Beranda</a>
+        <a href="#">Beasiswa</a>
+    </div>
+
+</body>
+</html>
