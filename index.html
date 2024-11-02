@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLAGEUS</title>
+    <style>
+        /* Global Styles */
+        body {
+           
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Prevent body scrolling */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #f7ca00;
+            color: black;
+            padding-top: 10px;
+         
+        }
+        .judul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .ikon{
+            mix-blend-mode: multiply;
+        }
+
+        .header h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            margin: 0;
+            padding-top: 12px;
+        }
+        /* bagian slider */
+        .slider{
+    height: fit-content;
+    width: 625px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid black;
+    border-radius: 3px;
+    
+}
+.wrap{
+
+    display: flex;
+    animation: slide 15s infinite;
+}
+.wrap img{
+     width: 100%;
+    
+}
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-100%);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width:800px){
+    .slider{
+        width: 410px   ;
+      
+    }
+}
+        /* Menu Toggle Button (Hamburger) */
+        .menu-toggle {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+            width: 30px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 4px auto;
+            transition: 0.4s;
+        }
+
+        /* Side Navigation Menu */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #f7ca00;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .sidenav a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1; /* Allows the content area to take up available space */
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding-bottom: 60px; /* Space for footer */
+        }
+
+        .tips {
+            text-align: center;
+            background-color: #f7ca00;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #f7ca00;
+        }
+
+        .tips img {
+            width: 100%;
+            max-width: 100%; /* Ensure responsive image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Section Styles (Universities) */
+        .section {
+            background-color: rgb(252, 252, 241);
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+           
+         
+            
+        }
+
+        .section div {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            
+        }
+
+        .section div img {
+            border: 5px solid whitesmoke;
+            width: 50px;
+            height: 50px;
+        }
+
+        .universities {
+            text-align: center;
+        }
+
+        .university-list {
+            text-align: center;
+        }
+
+        .university {
+            display: inline-block;
+            width: 45%;
+            margin-bottom: 20px;
+            vertical-align: top;
+        }
+
+        .university img {
+            width: 100%;
+            border-radius: 5px;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Footer Styles */
+        .footer {
+           
+            background-color: #f7ca00;
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Change footer position */
+            bottom: 0;
+            width: 100%; /* Full width */
+        }
+
+        .footer div {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .footer div img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .university {
+                width: 90%; /* Make universities take more width on smaller screens */
+            }
+
+            .footer {
+                padding: 5px; /* Reduce footer padding on small screens */
+            }
+
+            .header h1 {
+                font-size: 20px; /* Reduce header size on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-toggle {
+                top: 5px; /* Adjust toggle position */
+            }
+
+            .header h1 {
+                font-size: 18px; /* Further reduce header size */
+            }
+
+            .sidenav a {
+                font-size: 20px; /* Smaller font size for sidenav */
+            }
+
+            .tips img {
+                max-width: 100%; /* Make sure tips image is responsive */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" onclick="openNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Title Text Centered -->
+        <div class="judul">
+            <img class="ikon" src="ikon.jpeg" width="50px" height="50px">
+            <h1>COLLAGEUS</h1>
+        </div>
+     
+        <div class="tips">
+            <div class="slider">   
+                <div class="wrap">
+                  <img src="gambar1.jpeg" alt="">
+                  <img src="gambar2.jpeg" alt="">
+                  <img src="gambar3.jpeg" alt="">
+     
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+        <!-- Close Button -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Profile Section in Sidebar -->
+        <div style="padding: 20px; border-bottom: 1px solid #ccc;">
+            <img src="profil.jpeg" alt="Profile Picture" style="border-radius: 50%; width: 60px; height: 60px; margin-bottom: 10px;">
+            <h2 style="margin: 5px; font-size: 18px; font-weight: bold;">Felicyaaa</h2>
+            <p style="margin: 5px; font-size: 14px; color: #555;">cyacya13@gmail.com</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <a href="#">Feedback</a>
+        <a href="#">Customer Service</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Tips Section -->
+        <!-- <div class="tips">
+            <div class="slider">   
+                <div class="wrap">
+                  <img src="gambar1.jpeg" alt="">
+                  <img src="gambar2.jpeg" alt="">
+                  <img src="gambar3.jpeg" alt="">
+     
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Sections for Universities -->
+        <div class="section">
+            <div>
+                <a href="univluar.html"><img  class="ikon" src="luarnegeri.jpeg" alt="Perguruan Tinggi Luar Negeri"></a>
+                <!-- <img  class="ikon" src="luarnegeri.jpeg" alt="Perguruan Tinggi Luar Negeri"> -->
+                <p>Universitas
+                     Luar Negeri</p>
+            </div>
+            <div>
+                <a href="univdalam.html">  <img class="ikon" src="dalamnegeri.jpeg" alt="Perguruan Tinggi  Dalam Negeri"></a>
+                <!-- <img class="ikon" src="dalamnegeri.jpeg" alt="Perguruan Tinggi  Dalam Negeri"> -->
+                <p>Universitas Dalam Negeri</p>
+            </div>
+        </div>
+
+        <!-- Universities in the World -->
+        <div class="universities">
+            <h2>Universitas Dengan Peringkat Terbaik Di Dunia</h2>
+            <div class="university-list">
+                <div class="university">
+                    <img src="oxford.jpeg" alt="University of Oxford">
+                 
+                </div>
+                <div class="university">
+                    <img src="ntu.jpeg" alt="National Taiwan University">
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- Universities in Indonesia -->
+        <div class="universities">
+            <h2>Universitas Dengan Peringkat Terbaik Di Indonesia</h2>
+            <div class="university-list">
+                <div class="university">
+                    <img src="itb.jpeg" alt="Institut Teknologi Bandung">
+                   
+                </div>
+                <div class="university">
+                    <img src="telkom.jpeg" alt="Telkom University">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div>
+            <img src="homewhite.jpeg" alt="Beranda">
+            <p>Beranda</p>
+        </div>
+        <div>
+            <a href="beasiswa.html"><img src="beasiswa.jpeg" alt="Beasiswa"></a>
+            <!-- <img src="beasiswa.jpeg" alt="Beasiswa"> -->
+            <p>Beasiswa</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Side Navigation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
